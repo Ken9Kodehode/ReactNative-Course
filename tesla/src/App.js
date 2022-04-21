@@ -1,19 +1,24 @@
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {StyleSheed, Text, View} from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import CarsList from './components/CarsList';
+import Header from './components/Header';
 
-const App = () => {
+export default function App() {
   return (
-    <View style={StyleSheed.container}>
-      <Text>This is quizzler</Text>
+    <View style={styles.container}>
+      <Header />
+      <CarsList />
+      <StatusBar style="auto" />
     </View>
-  )
+  );
 }
 
-export default App;
-
-const styles = StyleSheet.create ({
+const styles = StyleSheet.create({
   container: {
-    paddingTop: 40,
-    paddingHorizontal: 16,
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
